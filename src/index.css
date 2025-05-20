@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color Palette */
+  --color-accent: #E63946;
+  --color-offwhite: #F1FAEE;
+  --color-lightcyan: #A8DADC;
+  --color-oceanblue: #457B9D;
+  --color-deepnavy: #1D3557;
+}
+
+@layer components {
+  /* Speakers Section - Updated with @scope */
+  .scope-speaker {
+    @apply relative;
+    
+    &:hover {
+      .scope-speaker\\:hover\\:scale-110 {
+        @apply scale-110;
+      }
+      
+      .scope-speaker\\:hover\\:opacity-100 {
+        @apply opacity-100;
+      }
+    }
+  }
+}
+
+
+@layer components {
+  /* Flip Card Styles */
+  .flip-card {
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  /* Carousel Styles */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .transform-rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
+
+
+@layer components {
+  .bg-magenta-500 {
+    background-color: #1D3557;
+  }
+  .hover\:bg-magenta-600:hover {
+    background-color: #1D3557;
+  }
+  .text-magenta-500 {
+    color: #1D3557;
+  }
+  .text-teal-500 {
+    color: #E63946;
+  }
+}
+
+/* Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
