@@ -67,7 +67,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-oceanblue">
+    <section id="home" className="relative h-screen w-full overflow-hidden bg-oceanblue">
       {/* Background Carousel */}
       <div className="absolute inset-0">
         <Slider {...settings} className="h-full">

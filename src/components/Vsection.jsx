@@ -1,6 +1,6 @@
 const Vsection = () => {
   return (
-    <section className="py-12 md:py-20 bg-offwhite">
+    <section className="py-12 md:py-20 bg-offwhite" id="venue">
       <div className="container mx-auto px-4">
         {/* Mobile Title (hidden on larger screens) */}
         <h2 className="text-2xl font-bold uppercase text-accent mb-6 md:hidden">
