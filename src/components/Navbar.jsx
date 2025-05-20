@@ -40,7 +40,7 @@ const Navbar = () => {
                 alt="Event Logo" 
                 className="h-10 md:h-12 w-auto"
               /> */}
-              <span className="ml-3 text-xl font-bold text-deepnavy hidden sm:inline">
+              <span className="ml-3 text-xl font-bold text-deepnavy  sm:inline">
                 PGDC
               </span>
             </a>
